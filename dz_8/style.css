@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url("font/Gilroy-Semibold.woff2");
+}
+
+@font-face {
+    font-family: Gilroy-SemiBold;
+    src: url("font/Gilroy-Semibold.woff2");
+}
+
+@font-face {
+    font-family: Gilroy-Medium;
+    src: url("font/Gilroy-Medium.woff2");
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url("font/Gilroy-Regular.woff2");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    background: #FFF;
+    font-family: Gilroy, serif;
+    font-weight: 400;
+}
+
+.content, 
+.footer{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 84px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 533px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.nav__link {
+    color: #000;
+    font-family: 'Gilroy-Medium', serif;
+}
+
+.nav__link--active {
+    color: #F25822;
+    font-family: 'Gilroy-SemiBold', serif;
+}
+
+.main {
+    display: flex;
+    gap: 39px;
+    margin-bottom: 162px;
+}
+
+.main__info{
+    max-width: 522px;
+}
+
+.main__title {
+    color: #000;
+    font-size: 60px;
+    font-family: 'Gilroy-Bold', serif;
+    margin-bottom: 17px;
+}
+
+.main__text {
+    color: #888;
+    font-size: 20px;
+    font-family: 'Gilroy-Medium', serif;
+    margin-bottom: 37px;
+}
+
+.btn_group {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.btn:hover{
+    color: #FFF;
+    background: #F25822;
+    font-family: 'Gilroy-Bold', serif;
+    border-radius: 50px;
+    box-shadow: 4px 4px 8px 0 rgba(242, 88, 34, 0.20);
+    flex-shrink: 0;
+    line-height: 19px;
+}
+
+.btn {
+    color: #AAA;
+    background-color: #FFFFFF;
+    font-size: 15px;
+    font-family: 'Gilroy-Bold', serif;
+    padding: 15px 36px 16px 35px;
+    border-width: 0;
+    cursor: pointer;
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: space-between;
+    margin: 97px auto;
+}

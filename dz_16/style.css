@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background: #222;
+}
+
+header {
+    background: #F1E4E6;
+}
+
+main {
+    background: #FFF;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.nav__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__icons {
+    display: flex;
+    align-items: center;
+    gap: 41px;
+    margin: 18px 0 18px 231px;
+}
+
+.nav__menu {
+    display: flex;
+    gap: 25px;
+    margin: 26px 240px 20px 0;
+}
+
+.header__group {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.header__cell--1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.header_img {
+    width: 100%;
+    /*height: 100%;*/
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 16px;
+    margin: 290px 0 0 63px;
+}
+
+.header__title {
+    color: #222;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.header__text {
+    color: #222;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/*Основные свойства унаследованы от header__text. Или лучше объявлять полностью? */
+.header__text--coral {
+    /*color: #F16D7F;*/
+    color: #cd5364;
+}
+
+.top {
+    /*Так отображение более симметрично, но не соответствует шаблону*/
+    display: flex;
+    justify-content: center;
+    margin: 65px auto 96px auto;
+
+}
+
+.top__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    grid-template-rows: 260px 180px;
+    gap: 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top__cards img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.top__card {
+    position: relative;
+}
+
+
+.top__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 22, 22, 0.70);
+}
+
+.top__card--large {
+    grid-row-start: 2;
+    grid-column: span 3;
+    position: relative;
+}
+
+.top__info {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.top__text {
+    color: #db5467;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.prod {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 60px auto 0;
+}
+
+.prod__title {
+    color: #222;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+
+.prod__info {
+    color: #717171;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 17px;
+    margin-bottom: 48px;
+}
+
+.prod__cards {
+    display: grid;
+    grid-template-rows: repeat(2, 587px);
+    grid-template-columns: repeat(3, 360px);
+    column-gap: 30px;
+    row-gap: 25px;
+    margin: 0 auto;
+}
+
+.prod__card {
+    background: #F8F8F8;
+}
+
+.card__img {
+    position: relative;
+    width: 360px;
+    height: 420px;
+}
+
+.card__img img {
+    width: 100%;
+}
+
+.cart {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(58, 56, 56, 0.86);
+    transition: height 0.2s ease-in;
+}
+
+.prod__card:hover .cart {
+    height: 100%;
+}
+
+.cart__btn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #FFF;
+    border: solid 1px #FFFFFF;
+}
+
+.cart__btn img {
+    width: 26px;
+}
+
+.card__info {
+    padding: 24px;
+}
+
+.prod__card:hover .cart__btn {
+    display: flex;
+}
+
+.card__title {
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.card__text {
+    color: #5D5D5D;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 300;
+    margin: 16px 0;
+}
+
+.card__price {
+    color: #b34655;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.prod__btn {
+    color: #cd5364;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    padding: 15px 39px;
+    margin: 48px auto 60px auto;
+    border: solid 1px #cd5364;
+    transition: color 0.25s linear, background-color 0.25s linear;
+}
+
+.prod__btn:hover {
+    color: #FFFFFF;
+    background: #cd5364;
+}
+
+footer {
+    background: #222224;
+}
+
+.promotions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    padding: 104px 0;
+}
+
+.promo__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+}
+
+.promo__card img {
+    margin-bottom: 28px;
+}
+
+.promo__header {
+    color: #FBFBFB;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.promo__text {
+    color: #FBFBFB;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+}
+
+.subscribes {
+    background-image: url("img/footer_bck.jpg");
+}
+
+.subscribes_bck {
+    background: rgba(244, 244, 244, 0.70);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 448px;
+}
+
+.subscribe__feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback__text {
+    color: #222224;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 40px;
+    max-width: 360px;
+    height: 99px;
+}
+
+.feedback__text--italic {
+    font-style: italic;
+}
+
+.subscribe__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.subscribe__header {
+    color: #222224;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.subscribe__text {
+    color: #222224;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.input__mail {
+    color: #222224;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 29px;
+    background: #E1E1E1;
+    border: #E1E1E1;
+    border-radius: 25px 0 0 25px;
+    padding: 10px 20px;
+    width: 210px;
+}
+
+.input__mail:focus {
+    outline: none;
+}
+
+.subscribe__btn {
+    color: #FFF;
+    background: #cd5364;
+    border-radius: 0 25px 25px 0;
+    border: #cd5364;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 49px;
+    padding: 0 20px;
+    width: 100px;
+    margin-left: -3px;
+    cursor: pointer;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.social__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 235px;
+}
+
+.social__text {
+    color: #FBFBFB;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.social__icons {
+    display: flex;
+    gap: 7px;
+}
+
+.social__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    transition: background-color 0.2s linear, fill 0.2s linear;
+}
+
+.social__icon:hover {
+    background-color: #cd5364;
+}
+
+.social__icon:hover path {
+    fill: #FFFFFF;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .nav__icons {
+        margin: 18px 32px;
+    }
+
+    .nav__menu {
+        margin: 26px 32px 20px 0;
+    }
+
+    .header__info {
+        margin: 138px 0 0 39px;
+    }
+
+    .header__title {
+        font-size: 44px;
+    }
+
+    .header__text {
+        font-size: 24px;
+    }
+
+    .top {
+        margin-bottom: 110px;
+    }
+
+    .top__cards {
+        grid-template-columns: repeat(3, 232px);
+        grid-template-rows: 168px 116px;
+        gap: 20px;
+    }
+
+    .prod__cards {
+        grid-template-rows: repeat(3, 581px);
+        grid-template-columns: repeat(2, 360px);
+        column-gap: 16px;
+        row-gap: 17px;
+    }
+
+    .card__info {
+        padding: 25px 16px 20px;
+    }
+
+    .card__text {
+        margin: 12px 0 18px;
+    }
+
+    .prod__btn {
+        margin: 32px auto 70px auto;
+    }
+
+    .promotions {
+        flex-direction: column;
+        row-gap: 48px;
+        padding: 48px 0 64px;
+    }
+
+    .subscribes {
+        background-image: url("img/footer_bck_middle.jpg");
+    }
+
+    .subscribes_bck {
+        justify-content: center;
+        flex-direction: column;
+        height: 693px;
+    }
+
+    .feedback__text {
+        margin-top: 30px;
+        margin-bottom: 48px;
+    }
+
+    .subscribe__text {
+        margin-bottom: 27px;
+    }
+
+    .subscribe__form {
+        margin-bottom: 140px;
+    }
+
+    .social__info {
+        margin: 0 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 375px;
+    }
+
+    .nav__icons {
+        margin: 16px 18px;
+    }
+
+    .nav__menu {
+        margin: 25px 16px;
+        gap: 0;
+    }
+
+    .nav__link--cart, .nav__link--login {
+        display: none;
+    }
+
+    .header__group {
+        grid-template-columns: 100%;
+        height: 363px;
+    }
+
+    .header__cell--1 {
+        display: none;
+    }
+
+    .header__cell--2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__info {
+        gap: 15px;
+        margin: 0;
+    }
+
+    .header__rectangle {
+        height: 61px;
+        overflow: hidden;
+    }
+
+    .header__title {
+        font-size: 38px;
+    }
+
+    .header__text {
+        font-size: 20px;
+    }
+
+    .top {
+        margin: 64px auto;
+    }
+
+    .top__cards {
+        grid-template-columns: 343px;
+        grid-template-rows: repeat(3, 247px) 111px;
+        gap: 32px;
+        margin: 0 auto;
+    }
+
+    .top__card--large {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-row-start: 4;
+        grid-column: span 1;
+        overflow: hidden;
+    }
+
+    .top__card--large img {
+        width: 200%;
+        /*height: 200%;*/
+    }
+
+    .prod__info {
+        margin-bottom: 65px;
+    }
+
+    .prod__cards {
+        grid-template-rows: repeat(6, 580px);
+        grid-template-columns: 360px;
+        gap: 17px;
+    }
+
+    .card__info {
+        padding: 25px 16px 20px;
+    }
+
+    .prod__btn {
+        margin: 40px auto 85px;
+    }
+
+    .promotions {
+        flex-direction: column;
+        row-gap: 46px;
+        padding: 48px 0 81px;
+    }
+
+    .subscribes {
+        background: url("img/footer_bck_small.jpg"), lightgray -330.522px -207.478px / 322.249% 246.875% no-repeat;
+    }
+
+    .subscribes_bck {
+        justify-content: center;
+        flex-direction: column;
+        height: 550px;
+    }
+
+    .subscribe__feedback img {
+        width: 91px;
+        height: 91px;
+    }
+
+    .feedback__text {
+        font-size: 18px;
+        height: 73px;
+        margin-top: 29px;
+        margin-bottom: 59px;
+    }
+
+    .subscribe__form {
+        margin-bottom: 40px;
+    }
+
+    .subscribe__header {
+        line-height: 36px;
+    }
+
+    .subscribe__text {
+        font-size: 14px;
+        margin-bottom: 22px;
+        line-height: 18px;
+    }
+
+    .input__mail {
+        width: 195px;
+        line-height: 29px;
+        padding: 7px 20px;
+    }
+
+    .subscribe__btn {
+        line-height: 43px;
+    }
+
+    .socials {
+        padding: 43px 0 9px;
+    }
+
+    .social__info {
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+        margin: 0 62px;
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .top__cards {
+        grid-template-columns: 320px;
+    }
+
+    .prod__cards {
+        grid-template-columns: 320px;
+    }
+
+    .card__img {
+        width: 320px;
+    }
+
+    .promo__card {
+        width: 320px;
+    }
+
+    .input__mail {
+        width: 160px;
+    }
+
+    .social__info {
+        margin: 0 13px;
+    }
+}
